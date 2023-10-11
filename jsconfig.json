@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
+    "target": "ES5",
+    "baseUrl": "./",
+    "moduleResolution": "node",
     "paths": {
       "@app/*": ["app/*"],
       "@components/*": ["components/*"],
@@ -9,6 +12,8 @@
       "@lib/*": ["lib/*"],
       "@ui/*": ["ui/*"],
       "@constants/*": ["constants/*"]
-    }
+    },
+    "include": ["next-env.d.ts", "**/*.js", ".next/types/**/*.ts"],
+    "exclude": ["node_modules"]
   }
 }
