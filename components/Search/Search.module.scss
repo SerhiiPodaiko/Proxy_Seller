@@ -1,0 +1,11 @@
+.searchInput {
+  border: none;
+  border-bottom: 2px solid var(--orange-color);
+  color: var(--orange-color);
+  outline: none;
+
+  &::placeholder {
+    font-size: 14px;
+    color: var(--orange-color);
+  }
+}

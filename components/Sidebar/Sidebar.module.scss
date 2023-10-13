@@ -1,0 +1,157 @@
+.sidebar {
+  width: 18%;
+  padding: 30px 0 30px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  transition: .3s width cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  @media (max-width: 992px) {
+    padding: 20px;
+    width: 80px;
+  }
+
+  @media (max-width: 768px) {
+    border-radius: 20px 20px 0 0;
+    padding: 0;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    right: 0;
+    transition: .3s height cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: var(--white-color);
+    z-index: 100;
+
+    svg {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.sidebar .sidebarLink {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.sidebarHide {
+  padding: 20px;
+  width: 80px;
+
+  @media (max-width: 768px) {
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s height cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: var(--white-color);
+
+    a {
+      display: flex;
+    }
+
+    svg {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.sidebarMenu {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.sidebarHide > .sidebarLink {
+  display: flex;
+
+  span {
+    display: none;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+
+  &::after {
+    display: none;
+  }
+}
+
+.sidebarLink {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: var(--text-secondary-color);
+  transition: .3s ease-in-out;
+  border-right: 1px solid transparent;
+  position: relative;
+
+  &:hover {
+    color: #2CA9BC;
+  }
+
+  &:last-child {
+    margin-top: auto;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    right: -3.5px;
+    height: 100%;
+    width: 4px;
+    background: #3B39F3;
+    display: none;
+    transition: .3s ease-in-out;
+    border-radius: 10px;
+
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+
+  svg {
+    display: flex;
+  }
+
+  span {
+    @media (max-width: 992px) {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      display: flex;
+    }
+  }
+}
+
+.sidebarLinkActive {
+  transition: .3s ease-in-out;
+
+  span {
+    color: var(--orange-color);
+  }
+
+  &::after {
+    display: block;
+    background: #3B39F3;
+
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+}
