@@ -17,10 +17,10 @@ const User = ({ user }) => {
                     <span className={styles.email}>{user.email}</span>
                 </p>
                 <div className='d-flex align-items-center justify-content-between'>
-                    <Link href={`${PAGE_SLUGS.posts}/${user.id}`} className='btn btn-outline-primary'>
+                    <Link href={`${PAGE_SLUGS.user}/${user.id}/posts`} className='btn btn-outline-primary'>
                         Posts
                     </Link>
-                    <Link href={`${PAGE_SLUGS.albums}/${user.id}`} className='btn btn-outline-primary'>
+                    <Link href={`${PAGE_SLUGS.user}/${user.id}/albums`} className='btn btn-outline-primary'>
                         Albums
                     </Link>
                 </div>

@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import cn from 'classnames'
 
 import styles from './Search.module.scss'
@@ -17,8 +16,3 @@ const Search = ({ searchQuery, setSearchQuery }) => {
 }
 
 export default Search
-
-Search.propTypes = {
-    searchQuery: PropTypes.string.isRequired,
-    setSearchQuery: PropTypes.func.isRequired,
-}

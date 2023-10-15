@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 
+import styles from './Posts.module.scss'
 import Post from './Post'
 import { PAGE_SLUGS } from '@constants/pages'
 import Preloader from '@ui/Preloader/Preloader'
@@ -23,7 +24,7 @@ const Posts = ({ posts }) => {
     }
 
     return (
-        <section>
+        <section className={styles.posts}>
             <header className='d-flex align-items-center justify-content-between'>
                 <Link href={PAGE_SLUGS.home} className='btn btn-outline-primary'>
                     Back

@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types'
-
 const Sort = ({ sortOrder, setSortOrder }) => {
     return (
         <select
@@ -14,8 +12,3 @@ const Sort = ({ sortOrder, setSortOrder }) => {
 }
 
 export default Sort
-
-Sort.propTypes = {
-    sortOrder: PropTypes.string.isRequired,
-    setSortOrder: PropTypes.func.isRequired,
-}
