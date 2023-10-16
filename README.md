@@ -12,6 +12,8 @@
 
 ### Website Demo:
 
+- UI - https://proxy-seller-blush.vercel.app/
+
 - Desktop version
 
 ![Responsive Desktop website](./public/images/desktop-full.png)
