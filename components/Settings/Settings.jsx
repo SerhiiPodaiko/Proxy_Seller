@@ -1,7 +1,9 @@
+import Link from 'next/link'
 import Image from 'next/image'
 import cn from 'classnames'
 
 import styles from './Settings.module.scss'
+import { PAGE_SLUGS } from '@constants/pages'
 import DesktopFullImage from '@public/images/desktop-full.png'
 import DesktopShortImage from '@public/images/desktop-short.png'
 import LaptopFullImage from '@public/images/laptop-full.jpg'
@@ -12,7 +14,12 @@ import MobileShortImage from '@public/images/mobile-short.jpg'
 const Settings = () => (
     <section className={cn('p-2', styles.settings)}>
         <div className='container'>
-            <h4 className={cn('mb-4', styles.settingsTitle)}>Settings</h4>
+            <header className='d-flex flex-column gap-2'>
+                <Link href={PAGE_SLUGS.home} className='d-flex align-self-start btn btn-outline-primary'>
+                    Back
+                </Link>
+                <h4 className={cn('mb-4', styles.settingsTitle)}>Settings</h4>
+            </header>
             <div className='row'>
                 <div className='col-12'>
                     <h4 className={styles.settingsHead}>Desktop version</h4>
